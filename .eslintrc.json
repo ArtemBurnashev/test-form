@@ -1,0 +1,98 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:import/warnings",
+		"plugin:import/typescript",
+		"plugin:import/errors",
+		"plugin:jsx-a11y/recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+		"plugin:testing-library/react",
+		"plugin:jest-dom/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"settings": {
+		"react": { "version": "detect" },
+		"import/resolver": {
+			"typescript": {}
+		}
+	},
+	"plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+	"rules": {
+		"import/no-unresolved": "off",
+		"no-use-before-define": "off",
+		"@typescript-eslint/no-use-before-define": ["error"],
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"no-shadow": "off",
+		"@typescript-eslint/no-shadow": ["error"],
+		"no-restricted-exports": [
+			"error",
+			{
+				"restrictedNamedExports": ["then"]
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": [
+			"off",
+			{
+				"allowExpressions": true
+			}
+		],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-empty-function": ["off"],
+		"@typescript-eslint/no-explicit-any": ["off"],
+		"@typescript-eslint/ban-ts-comment": ["off"],
+		"@typescript-eslint/no-use-before-define": 0,
+		"import/prefer-default-export": "off",
+		"react/prop-types": "off",
+		"react/jsx-props-no-spreading": 0,
+		"react/require-default-props": 0,
+		"react/default-props-match-prop-types": 0,
+		"@typescript-eslint/no-non-null-assertion": 0,
+		"jsx-a11y/label-has-associated-control": [
+			2,
+			{
+				"labelComponents": ["CustomInputLabel"],
+				"labelAttributes": ["label"],
+				"controlComponents": ["CustomInput"],
+				"depth": 3
+			}
+		],
+		"react/function-component-definition": [
+			2,
+			{
+				"namedComponents": "arrow-function"
+			}
+		],
+		"react/destructuring-assignment": ["off"],
+		"indent": ["error", "tab"],
+		"prettier/prettier": ["warn", { "usePrettierrc": true }],
+		"camelcase": ["warn"],
+		"max-lines": ["error", { "max": 900, "skipBlankLines": true }]
+	}
+}
