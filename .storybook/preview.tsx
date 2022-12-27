@@ -1,5 +1,7 @@
-import { ThemeProvider } from '@mui/material';
-import { MainTheme } from '../src/theme/schemes/main-theme';
+
+/* import { MainTheme } from '../src/theme/schemes/main-theme'; */
+import { MantineProvider } from '@mantine/core';
+import React from 'react';
 
 export const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
@@ -13,8 +15,8 @@ export const parameters = {
 
 export const decorators = [
 	Story => (
-		<ThemeProvider theme={MainTheme}>
+		<MantineProvider withCSSVariables withGlobalStyles withNormalizeCSS>
 			<Story />
-		</ThemeProvider>
+		</MantineProvider>
 	),
 ];
