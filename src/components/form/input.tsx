@@ -1,4 +1,4 @@
-import { Box, TextInput } from '@mantine/core'
+import { Box, BoxProps, TextInput } from '@mantine/core'
 import React from 'react';
 import { useController } from 'react-hook-form';
 import { useYupFormContext } from 'utils/react-hook-form';

@@ -10,7 +10,7 @@ export const schema: SchemaOf<any> = object({
 		.max(255)
 		.min(1)
 		.required(),
-	address: string()
+	address: string().nullable()
 		.max(255)
 		.min(1),
 });

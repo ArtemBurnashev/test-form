@@ -7,7 +7,7 @@ import { schema } from './validation';
 import { Box, Text } from '@mantine/core';
 
 export const Form = () => {
-	
+
 	const methods = useYupForm({
 		defaultValues: {
 			longitude: '69.269968',
@@ -24,23 +24,19 @@ export const Form = () => {
 	});
 
 	return (
-		<Box>
-			<Text fz="xl" fw={700} sx={{marginBottom: 20}}>Hello from ELD project bro!!! Add some magic... </Text>
+		<Box p={20}>
+			<Text fz="xl" fw={700}>
+				Test form{' '}
+			</Text>
 			<form onSubmit={handleSubmit}>
 				<FormProvider {...methods}>
-					<Input
-						label="Company name"
-						name="company_name"
-						placeholder="Esther Howard"
-					/>
+					<Input label="Company name" name="company_name" />
 					<Input label="Email address" name="email" />
-					<Input label="Address" name="address" placeholder="San Vicente" />
-					<button type="submit" style={{marginTop: 10}}>submit</button>
+					<Input label="Address" name="address" />
+					<button type="submit" style={{ marginTop: 10 }}>submit</button>
 				</FormProvider>
 			</form>
-			<Box>
-				{mutate}
-			</Box>
+			<Box>{mutate}</Box>
 		</Box>
 
 	);
